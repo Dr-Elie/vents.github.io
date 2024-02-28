@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <style>
+    body {
+      background-color: #79FFB1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      margin: 0;
+      padding-top: 20px;
+    }
+
+    .container {
+      width: 30%;
+      padding: 20px;
+      background-color: rgb(248, 151, 176);
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      color: blue;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      color: blue;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      color: rgb(20, 20, 20);
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:hover,
+    input[type="password"]:hover {
+      background-color: rgb(154, 189, 154);
+    }
+
+    input[type="submit"] {
+      width: 30%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: purple;
+      border-radius: 10px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"]:hover {
+      color: blue;
+      background-color: lime;
+    }
+
+    input[type="checkbox"] {
+      margin-top: 10px;
+    }
+
+    .error {
+      color: blue;
+      font-weight: bold;
+    }
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form onsubmit="return validateForm()">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password
+      </div>
+      Dont have account?<a href="Register .html">Register</a>
+      <a href="home.html">
+      <input type="submit" value="Login"></a>
+      <a href="index .html"><button type="button">Exit</button></a>
+      <div id="error-msg" class="error">
+  
+    </form>
+  </div>
+  <script>
+    function togglePassword() {
+      // Function to toggle password visibility
+    }
+
+    function validateForm() {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var errorMsg = document.getElementById("error-msg");
+
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[_\W]).{8,}$/;
+
+      if (!emailPattern.test(email)) {
+        errorMsg.innerText = "Please enter a valid email address.";
+        return false;
+      }
+
+      if (!passwordPattern.test(password)) {
+        errorMsg.innerText = "Password must be at least 8 characters long and,atleast uppercase letter, and special characters.";
+        return false;
+      }
+
+      // Redirect to home page if details are correct
+      window.location.href = "home.html";
+
+      return false; // Prevent form submission since we're redirecting manually
+    }
+    
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+     <nav>
+        <ul class="navigation">
+            <li><a href="#section1">Machineries</a></li>
+            <li><a href="#section2">Materials</a></li>
+            <li><a href="#section3">Task</a></li>
+            <li><a href="#section4">Communication</a></li>
+        </ul>
+        </nav>
+    <div class="page">
+        <section id="section1" class="section">
+            <h2><b>Machinery management</b></h2><hr>
+            <a href="Login1.html">logout</a>
+            <form>
+                <label><b>REQUEST MACHINE </label></b>
+                <div class="machinechk">
+                <label for="checkbox1">Escavator</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox1">Bulldozer</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox2">Grader</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox1">Compactor</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox1">Cranes</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox1">Backhoe</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox1">Paver</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox1">Roller</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox1">Forklift</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <label for="checkbox1">Concrete mixer</label>
+                <input type="checkbox" id="checkbox1" name="checkbox1"><br>
+                <br>
+            </div>
+            <label for="comment">Additional request</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+                <button type="button">submit</button>
+                <br><br>
+                <label for="comment">REPORT MACHINE DAMAGE</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+                <button type="button">Submit</button>
+                <br>
+                <label for="comment">RETURN MACHINE COMMENT</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+                <br>
+                <button type="button">Send</button>
+            </form>
+        </section>
+
+        <section id="section2" class="section">
+            <h2><b></b>REQUEST MATERIALS FROM MANAGEMENT</b></h2><hr>
+            <form>
+                <label for="comment">REQUEST MATERIALS</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <img src="Tar.jpg" alt="Blank">
+            <img src="Roadlami.jpg" alt="Blank">
+            <img src="Lami.jpg" alt="Blank">
+        </section>
+
+        <section id="section3" class="section">
+            <h2>TASK MANAGER</h2>
+            <form>
+                <label>Start Task:</label>
+                <input type="time" name="time1">
+                <br>
+                <label>End Task:</label>
+                <input type="time" name="time2">
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <input type="text" placeholder="Description">
+            <button type="button">Record</button>
+        </section>
+
+        <section id="section4" class="section">
+            <h2>SEND AND RECIEVE MESSAGES</h2>
+            <form>
+                <label for="comment">Write message</label><br>
+                <textarea id="comment" name="comment" rows="4" cols="90"></textarea>
+                <br>
+                <button type="submit">Send</button>
+            </form>
+            <div id="admin-response"></div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
